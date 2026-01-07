@@ -1,160 +1,118 @@
-:root{
-  --bg:#0b0b0f;
-  --panel:#12121a;
-  --text:#f3f3f7;
-  --muted:#a7a7b6;
-  --line:rgba(255,255,255,.10);
-  --accent:#ffffff;
-}
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Bologna Savage</title>
+  <meta name="description" content="Official music site for Bologna Savage. Independent releases, visuals, and updates. Music first. Everything else second." />
+  <link rel="stylesheet" href="styles.css" />
+</head>
 
-*{box-sizing:border-box}
-html,body{margin:0;padding:0}
-body{
-  font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
-  background: radial-gradient(1200px 600px at 20% 0%, rgba(255,255,255,.06), transparent 60%),
-              radial-gradient(900px 500px at 80% 10%, rgba(255,255,255,.04), transparent 55%),
-              var(--bg);
-  color:var(--text);
-  line-height:1.4;
-}
+<body>
+  <header class="site-header">
+    <a class="brand" href="#top" aria-label="Bologna Savage home">
+      <span class="brand-mark">B$</span>
+      <span class="brand-text">Bologna Savage</span>
+    </a>
 
-a{color:inherit;text-decoration:none}
-a:hover{opacity:.85}
+    <nav class="nav">
+      <a href="#music">Music</a>
+      <a href="#shows">Shows / News</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
 
-.site-header{
-  position:sticky; top:0; z-index:10;
-  display:flex; align-items:center; justify-content:space-between;
-  padding:14px 18px;
-  background:rgba(11,11,15,.72);
-  backdrop-filter: blur(10px);
-  border-bottom:1px solid var(--line);
-}
+  <main id="top">
+    <section class="hero">
+      <div class="hero-copy">
+        <h1>BOLOGNA SAVAGE</h1>
+        <p class="tagline">Independent releases, visuals, and updates. Music first. Everything else second.</p>
 
-.brand{display:flex; align-items:center; gap:10px}
-.brand-mark{
-  display:inline-flex; align-items:center; justify-content:center;
-  width:34px; height:34px;
-  border:1px solid var(--line);
-  border-radius:10px;
-  background:rgba(255,255,255,.04);
-  font-weight:700;
-}
-.brand-text{font-weight:600; letter-spacing:.4px}
+        <div class="hero-cta">
+          <a class="btn" href="#music">Listen</a>
+          <a class="btn btn-ghost" href="#shows">Shows / News</a>
+        </div>
 
-.nav{display:flex; gap:14px}
-.nav a{
-  padding:8px 10px;
-  border-radius:10px;
-  border:1px solid transparent;
-}
-.nav a:hover{border-color:var(--line); background:rgba(255,255,255,.03)}
+        <p class="micro">
+          This site is a clean hub. More sections can be added anytime.
+        </p>
+      </div>
 
-main{max-width:1100px; margin:0 auto; padding:24px 18px 60px}
+      <div class="hero-media" aria-label="Hero image">
+        <img src="images/hero-image.png" alt="Bologna Savage hero image" />
+      </div>
+    </section>
 
-.hero{
-  display:grid;
-  grid-template-columns: 1.1fr .9fr;
-  gap:22px;
-  align-items:stretch;
-  padding:22px;
-  border:1px solid var(--line);
-  border-radius:18px;
-  background:rgba(18,18,26,.55);
-}
+    <section id="music" class="section">
+      <div class="section-head">
+        <h2>Music</h2>
+        <p>Embedded Spotify players (no leaving the site). We can add more once you pick what to feature.</p>
+      </div>
 
-.hero-copy h1{
-  margin:0 0 10px;
-  font-size: clamp(34px, 4vw, 54px);
-  letter-spacing:1px;
-}
-.tagline{margin:0 0 16px; color:var(--muted); max-width:44ch}
+      <div class="grid">
+        <article class="card">
+          <h3>Featured</h3>
+          <p class="muted">Paste Bologna Savage’s Spotify embed here later.</p>
+          <div class="embed-placeholder" role="img" aria-label="Spotify embed placeholder">
+            Spotify embed goes here.
+          </div>
+        </article>
 
-.hero-cta{display:flex; gap:10px; margin:10px 0 14px}
-.btn{
-  display:inline-flex; align-items:center; justify-content:center;
-  padding:10px 14px;
-  border-radius:12px;
-  border:1px solid var(--line);
-  background:rgba(255,255,255,.06);
-  font-weight:600;
-}
-.btn:hover{background:rgba(255,255,255,.10)}
-.btn-ghost{background:transparent}
+        <article class="card">
+          <h3>Latest Release</h3>
+          <p class="muted">Optional second embed slot.</p>
+          <div class="embed-placeholder" role="img" aria-label="Spotify embed placeholder">
+            Spotify embed goes here.
+          </div>
+        </article>
+      </div>
+    </section>
 
-.micro{margin:0; color:var(--muted); font-size:14px}
+    <section id="shows" class="section">
+      <div class="section-head">
+        <h2>Shows / News</h2>
+        <p>Keep it simple for now. You can update this anytime without breaking anything.</p>
+      </div>
 
-.hero-media{
-  border-radius:16px;
-  overflow:hidden;
-  border:1px solid var(--line);
-  background:#0f0f15;
-  min-height:320px;
-}
-.hero-media img{
-  width:100%;
-  height:100%;
-  object-fit:cover;
-  display:block;
-  filter: contrast(1.05) saturate(1.02);
-}
+      <div class="grid">
+        <article class="card">
+          <h3>Upcoming</h3>
+          <ul class="list">
+            <li><span class="pill">TBA</span> No shows posted yet.</li>
+            <li class="muted">Format later: Date — City — Venue — Tickets link</li>
+          </ul>
+        </article>
 
-.section{margin-top:26px}
-.section-head{
-  margin-bottom:12px;
-}
-.section-head h2{margin:0 0 6px; font-size:22px; letter-spacing:.6px}
-.section-head p{margin:0; color:var(--muted)}
+        <article class="card">
+          <h3>Updates</h3>
+          <ul class="list">
+            <li><span class="pill">New</span> Site is live. More coming soon.</li>
+            <li class="muted">We can add a real “news” feed later if you want.</li>
+          </ul>
+        </article>
+      </div>
+    </section>
 
-.grid{
-  display:grid;
-  grid-template-columns: repeat(2, minmax(0,1fr));
-  gap:14px;
-}
+    <section id="contact" class="section">
+      <div class="section-head">
+        <h2>Contact / Collabs</h2>
+        <p>Interested in collaborating on a track, features, or having Bologna Savage open a show?</p>
+      </div>
 
-.card{
-  border:1px solid var(--line);
-  border-radius:16px;
-  background:rgba(18,18,26,.55);
-  padding:16px;
-}
-.card h3{margin:0 0 8px}
-.muted{color:var(--muted)}
-.list{margin:10px 0 0; padding:0; list-style:none; display:grid; gap:10px}
+      <div class="card">
+        <p class="muted">
+          Contact details coming soon. (We’ll add the form once there’s an email address he can access.)
+        </p>
+      </div>
+    </section>
 
-.pill{
-  display:inline-block;
-  padding:3px 8px;
-  border-radius:999px;
-  border:1px solid var(--line);
-  background:rgba(255,255,255,.05);
-  margin-right:8px;
-  font-size:12px;
-}
+    <footer class="footer">
+      <p class="muted">© <span id="year"></span> Bologna Savage</p>
+    </footer>
+  </main>
 
-.embed-placeholder{
-  margin-top:12px;
-  border:1px dashed rgba(255,255,255,.25);
-  border-radius:14px;
-  padding:18px;
-  color:var(--muted);
-  min-height:160px;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  text-align:center;
-}
-
-.footer{
-  margin-top:34px;
-  padding-top:16px;
-  border-top:1px solid var(--line);
-  text-align:center;
-}
-
-@media (max-width: 860px){
-  .hero{grid-template-columns: 1fr; padding:18px}
-  .grid{grid-template-columns: 1fr}
-  .nav{display:none}
-  .hero-media{min-height:260px}
-}
-
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>

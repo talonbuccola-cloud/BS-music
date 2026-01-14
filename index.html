@@ -160,6 +160,14 @@
   );
 
   revealEls.forEach((el) => io.observe(el));
+    // Make cards animate even when hovering the Spotify iframe
+document.querySelectorAll(".card iframe").forEach((frame) => {
+  const card = frame.closest(".card");
+  if (!card) return;
+
+  frame.addEventListener("mouseenter", () => card.classList.add("is-iframe-hover"));
+  frame.addEventListener("mouseleave", () => card.classList.remove("is-iframe-hover"));
+});
 </script>
 </body>
 </html>

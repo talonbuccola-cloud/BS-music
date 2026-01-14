@@ -257,7 +257,8 @@ body::before{
   box-shadow: 0 16px 40px rgba(0,0,0,.35);
 }
 
-.card:hover{
+.card:hover,
+.card.is-iframe-hover{
   transform: translateY(-6px) rotateX(2deg) rotateY(-2deg);
   border-color: rgba(255,255,255,.20);
   box-shadow: 0 26px 70px rgba(0,0,0,.55);

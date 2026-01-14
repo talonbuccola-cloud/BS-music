@@ -168,6 +168,30 @@ document.querySelectorAll(".card iframe").forEach((frame) => {
   frame.addEventListener("mouseenter", () => card.classList.add("is-iframe-hover"));
   frame.addEventListener("mouseleave", () => card.classList.remove("is-iframe-hover"));
 });
+   // Subtle hero image parallax on scroll
+const heroImg = document.querySelector(".hero-media img");
+const heroSection = document.querySelector(".hero");
+
+function heroParallax() {
+  if (!heroImg || !heroSection) return;
+
+  const rect = heroSection.getBoundingClientRect();
+  const viewH = window.innerHeight;
+
+  const progress = (viewH - rect.top) / (viewH + rect.height);
+  const clamped = Math.max(0, Math.min(1, progress));
+
+  const y = (clamped - 0.5) * 18; // adjust 18 for more/less movement
+  heroImg.style.transform = `translateY(${y}px)`;
+}
+
+window.addEventListener(
+  "scroll",
+  () => requestAnimationFrame(heroParallax),
+  { passive: true }
+);
+window.addEventListener("resize", heroParallax);
+heroParallax(); 
 </script>
 </body>
 </html>

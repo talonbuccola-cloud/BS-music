@@ -302,6 +302,12 @@ body::before{
   border-color: rgba(255,255,255,.20);
   box-shadow: 0 26px 70px rgba(0,0,0,.55);
 }
+/* Spotify iframes swallow hover, so this makes the card animate anyway */
+.card.is-iframe-hover{
+  transform: translateY(-6px) rotateX(2deg) rotateY(-2deg);
+  border-color: rgba(255,255,255,.20);
+  box-shadow: 0 26px 70px rgba(0,0,0,.55);
+}
 
 /* Scroll reveal */
 .reveal{

@@ -1034,3 +1034,59 @@
     display: block;
   }
 }
+
+/* Mobile sunset-to-footer overlap. The sunset artwork extends beneath the
+   footer while a raised jagged black edge masks its lower boundary. */
+@media (max-width: 700px) {
+  .about-page {
+    overflow-x: hidden;
+  }
+
+  .about-sunset {
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    height: clamp(250px, 68vw, 292px);
+    min-height: clamp(250px, 68vw, 292px);
+    margin-bottom: -70px;
+    overflow: visible;
+    border: 0;
+    outline: 0;
+    box-shadow: none;
+    background-position: center calc(84px - 46.7vw);
+    background-size: 100% auto;
+  }
+
+  .sunset-message {
+    padding: 92px 24px 30px;
+  }
+
+  .about-page .about-footer {
+    position: relative;
+    z-index: 20;
+    margin-top: 0;
+    border: 0;
+    outline: 0;
+    box-shadow: none;
+    isolation: isolate;
+  }
+
+  .about-page .about-footer::before {
+    content: "";
+    position: absolute;
+    z-index: 1;
+    top: -27px;
+    left: -2%;
+    width: 104%;
+    height: 29px;
+    pointer-events: none;
+    background: #050607;
+    clip-path: polygon(0 42%, 5% 13%, 12% 49%, 19% 18%, 27% 54%, 35% 16%, 43% 48%, 51% 12%, 59% 51%, 67% 17%, 75% 47%, 83% 11%, 91% 52%, 97% 19%, 100% 43%, 100% 100%, 0 100%);
+  }
+
+  .about-page .about-footer .footer-content,
+  .about-page .about-footer .copyright {
+    position: relative;
+    z-index: 2;
+  }
+}

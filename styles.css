@@ -389,3 +389,67 @@ html,body{max-width:100%;overflow-x:hidden}.hero{overflow:hidden}
   .footer-socials { gap: 17px; }
   .copyright { margin-top: 16px; font-size: 13px; }
 }
+/* Phone hero: preserve the desktop portrait/card relationship while keeping
+   both calls to action completely above the artwork. */
+@media (max-width: 680px) {
+  :root {
+    --cream: #f8f6f1;
+    --paper: #fffdf9;
+  }
+
+  body,
+  .hero {
+    background-color: var(--cream);
+  }
+
+  .site-header {
+    background: rgba(248, 246, 241, .97);
+  }
+
+  .hero {
+    min-height: 724px;
+    padding-bottom: 0;
+    overflow: visible;
+  }
+
+  .hero-copy {
+    z-index: 14;
+  }
+
+  .hero-actions {
+    position: relative;
+    z-index: 15;
+    margin-bottom: 0;
+  }
+
+  .hero-art {
+    z-index: 11;
+    top: 394px;
+    right: -16%;
+    bottom: auto;
+    width: 116%;
+    height: 470px;
+    overflow: visible;
+  }
+
+  .hero-symbol {
+    top: 1%;
+    right: 11%;
+    width: 48%;
+  }
+
+  .hero-player-wrap {
+    top: 0;
+    right: 3%;
+    width: 82%;
+  }
+
+  .paint-spray-one {
+    bottom: 5%;
+  }
+
+  .release-wrap {
+    z-index: 10;
+    margin-top: -42px;
+  }
+}

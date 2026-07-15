@@ -768,3 +768,12 @@ html,body{max-width:100%;overflow-x:hidden}.hero{overflow:hidden}
     margin-top: -100px;
   }
 }
+
+/* On phones, carry the real sunset edge artwork down into the raised black
+   transition so the palm and ramp do not end above the footer. */
+@media (max-width: 680px) {
+  .palm-scene,
+  .skate-scene {
+    bottom: -44px;
+  }
+}

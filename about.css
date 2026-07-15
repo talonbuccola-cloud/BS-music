@@ -788,3 +788,104 @@
     transition: none;
   }
 }
+/* Revised About-page order: identity first, followed by a compact process note. */
+.identity-card {
+  display: flex;
+  flex-direction: column;
+}
+.identity-card .about-follow-button {
+  margin-top: auto;
+}
+.identity-icon.art-icon {
+  width: 64px;
+  height: 76px;
+  overflow: visible;
+  fill: none;
+  stroke: #a9679a;
+  stroke-width: 4;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  filter: drop-shadow(0 0 9px rgba(169,103,154,.24));
+}
+.identity-icon.art-icon .spray-mist {
+  stroke-width: 3;
+}
+
+.process-note-section {
+  border-top: 1px solid rgba(255,255,255,.08);
+  border-bottom: 1px solid rgba(189,23,29,.35);
+}
+.process-note {
+  display: grid;
+  grid-template-columns: 150px minmax(0, 1fr);
+  align-items: center;
+  gap: clamp(34px,5vw,74px);
+  max-width: 1120px;
+  margin: auto;
+  padding: 50px clamp(30px,6vw,78px) 54px;
+}
+.process-note-logo {
+  display: block;
+  width: 138px;
+  height: 168px;
+  background: var(--about-plum);
+  opacity: .78;
+  -webkit-mask: url("images/bs-logo-gold.png") center / contain no-repeat;
+  mask: url("images/bs-logo-gold.png") center / contain no-repeat;
+}
+.process-note-copy h2 {
+  margin: 0;
+  color: #f5f1ec;
+  font-size: clamp(34px,3.2vw,49px);
+  line-height: 1;
+  text-transform: uppercase;
+}
+.process-note-copy h2 strong {
+  color: var(--about-red);
+}
+.process-note-copy .red-rule {
+  margin: 15px 0 22px;
+}
+.process-note-copy p {
+  margin: 0 0 12px;
+  color: #e2ded9;
+  font-family: Arial,sans-serif;
+  font-size: 16.5px;
+  line-height: 1.5;
+}
+.process-note-copy p:last-child {
+  margin-bottom: 0;
+}
+
+@media (max-width: 920px) {
+  .process-note {
+    grid-template-columns: 110px minmax(0,1fr);
+    gap: 28px;
+    padding-block: 44px 48px;
+  }
+  .process-note-logo {
+    width: 105px;
+    height: 130px;
+  }
+}
+@media (max-width: 680px) {
+  .process-note {
+    grid-template-columns: 1fr;
+    gap: 15px;
+    padding: 40px 22px 45px;
+  }
+  .process-note-logo {
+    width: 76px;
+    height: 92px;
+  }
+  .process-note-copy h2 {
+    font-size: 34px;
+  }
+  .process-note-copy p {
+    font-size: 16px;
+  }
+}
+
+.process-note-copy h2 strong {
+  white-space: nowrap;
+}

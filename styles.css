@@ -693,6 +693,7 @@ html,body{max-width:100%;overflow-x:hidden}.hero{overflow:hidden}
     grid-row: 1 / span 3;
     align-self: start;
     width: clamp(86px, 26vw, 108px);
+
     margin: 0;
     transform: none;
   }
@@ -757,5 +758,13 @@ html,body{max-width:100%;overflow-x:hidden}.hero{overflow:hidden}
   .hero-actions .button {
     flex: none;
     width: 100%;
+  }
+}
+
+/* Pull the phone release card into the portrait's transparent lower opening so
+   the figure rests directly on the player container with no cream gap. */
+@media (max-width: 700px) {
+  .release-wrap {
+    margin-top: -100px;
   }
 }

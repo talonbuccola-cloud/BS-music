@@ -453,3 +453,33 @@ html,body{max-width:100%;overflow-x:hidden}.hero{overflow:hidden}
     margin-top: -42px;
   }
 }
+
+/* Use the supplied sunset photograph on phones instead of the temporary
+   CSS-drawn palm and skater silhouettes. The vertical crop keeps both real
+   edge subjects visible behind the two-by-two feature grid. */
+@media (max-width: 680px) {
+  .sunset-features {
+    background: #e4a8aa;
+  }
+
+  .sunset-features::before {
+    display: block;
+    inset: 0;
+    opacity: 1;
+    background-color: #e4a8aa;
+    background-image: url("images/about-footer-sunset.png");
+    background-repeat: no-repeat;
+    background-position: center 45.5%;
+    background-size: 100% 392%;
+  }
+
+  .sun-glow,
+  .palm-scene,
+  .skate-scene {
+    display: none;
+  }
+
+  .feature-grid {
+    z-index: 3;
+  }
+}

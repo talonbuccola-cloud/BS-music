@@ -341,3 +341,51 @@ html,body{max-width:100%;overflow-x:hidden}.hero{overflow:hidden}
     min-width: 108px;
   }
 }
+
+/* Purpose-built phone layout: keep the visual identity without desktop-scale gaps. */
+@media (max-width: 680px) {
+  .site-header { min-height: 70px; padding: 9px 16px; }
+  .wordmark { font-size: 24px; }
+  .menu-toggle { width: 42px; height: 38px; }
+
+  .hero { min-height: 690px; padding: 24px 16px 0; }
+  .hero-copy { padding-top: 12px; }
+  .eyebrow { font-size: 17px; }
+  .hero h1 { font-size: clamp(58px, 18vw, 76px); }
+  .hero-statement { max-width: 310px; font-size: 21px; }
+  .hero-actions { display: grid; grid-template-columns: 1fr 1fr; width: 100%; gap: 8px; margin-top: 20px; }
+  .hero-actions .button { min-width: 0; min-height: 46px; padding: 8px 7px; font-size: 13px; white-space: nowrap; }
+  .hero-art { right: -25%; width: 126%; height: 55%; }
+  .hero-player-wrap { right: 4%; width: 73%; }
+  .paint-spray { opacity: .52; }
+
+  .release-wrap { margin-top: -10px; padding-inline: 10px; }
+  .release-card { gap: 20px; padding: 16px; border-radius: 16px; }
+  .release-art { width: 100%; margin: 0 auto; transform: none; }
+  .release-main h2 { font-size: 44px; }
+  .release-artist { margin-bottom: 12px; font-size: 23px; }
+  .spotify-embed { height: 152px; }
+  .stream-button { margin-top: 10px; }
+  .track-panel { padding-top: 14px; }
+  .track-list li { padding: 10px 0; }
+
+  .sunset-features { padding: 42px 12px 62px; }
+  .feature-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .feature,
+  .feature:nth-child(2),
+  .feature:nth-child(3),
+  .feature:nth-child(4) { min-height: 0; padding: 24px 8px; border-right: 1px solid rgba(16,16,16,.14); border-bottom: 1px solid rgba(16,16,16,.14) !important; }
+  .feature:nth-child(even) { border-right: 0; }
+  .feature:nth-child(n+3) { border-bottom: 0 !important; }
+  .feature-icon { width: 58px; height: 54px; stroke-width: 5; }
+  .feature h2 { font-size: 26px; }
+  .feature p { min-height: 58px; margin: 7px 0 13px; font-size: 16px; }
+  .small-button { min-width: 96px; min-height: 42px; padding: 6px 12px; font-size: 15px; }
+
+  .site-footer { padding: 30px 16px 20px; }
+  .footer-content { gap: 22px; }
+  .footer-copy h2 { font-size: 30px; }
+  .footer-copy p { font-size: 18px; }
+  .footer-socials { gap: 17px; }
+  .copyright { margin-top: 16px; font-size: 13px; }
+}

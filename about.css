@@ -741,13 +741,14 @@
     min-height: 360px;
   }
   .sunset-message {
-    padding: 92px 42px 90px;
+    padding: 18px 52px 12px;
   }
   .sunset-message p {
-    font-size: 32px;
+    font-size: clamp(18px, 5vw, 26px);
   }
   .sunset-message span {
-    font-size: 21px;
+    margin-top: 4px;
+    font-size: clamp(13px, 3.8vw, 18px);
   }
   .sunset-palm {
     opacity: .55;

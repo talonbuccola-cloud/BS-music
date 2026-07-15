@@ -10,3 +10,334 @@
 @media(max-width:680px){body{font-size:17px}html{scroll-padding-top:82px}.site-header{padding-inline:20px}.wordmark{font-size:27px}.hero{min-height:760px;padding:28px 20px 0}.eyebrow{margin-bottom:12px;font-size:19px}.hero h1{font-size:clamp(60px,19vw,88px);white-space:normal}.brush-underline{width:66%;height:11px;margin:12px 0 20px 28%}.hero-statement{font-size:23px}.hero-actions{gap:11px;margin-top:25px}.button{min-height:49px;padding:9px 17px;font-size:16px}.hero-art{right:-31%;width:136%;height:58%}.hero-symbol{top:1%;right:19%;width:49%}.hero-portrait{right:3%;width:77%}.release-wrap{margin-top:-16px;padding-inline:14px}.release-card{grid-template-columns:1fr;gap:28px;padding:22px}.release-art-placeholder{width:min(100%,340px);min-height:335px;margin:auto}.release-main{text-align:center}.stream-button{align-self:center;width:100%}.track-panel{grid-column:auto;padding-top:22px}.track-list{display:block}.track-list li{display:grid;grid-template-columns:34px 1fr;padding:12px 0;border-right:0;border-bottom:1px solid var(--line);text-align:left}.sunset-features{padding:70px 20px 95px}.feature-grid{grid-template-columns:1fr}.feature{min-height:0;padding:32px 15px;border-right:0;border-bottom:1px solid rgba(16,16,16,.16)!important}.feature:last-child{border:0!important}.feature p{min-height:0}.palm-scene{left:-35px;opacity:.25}.skate-scene{right:-65px;opacity:.28}.footer-content{grid-template-columns:1fr;gap:30px;text-align:center}.signup-form{grid-template-columns:1fr;border:0;gap:9px}.signup-form input{min-height:52px;border:1px solid rgba(255,255,255,.35);border-radius:5px}.signup-form button{min-height:49px;margin:0}.form-status{position:static;min-height:20px}.footer-socials{grid-column:auto}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*:before,*:after{transition-duration:.01ms!important;animation-duration:.01ms!important;animation-iteration-count:1!important}}
 html,body{max-width:100%;overflow-x:hidden}.hero{overflow:hidden}
+
+/* Wraparound hero portrait: the PNG's transparent lower opening reveals the release card. */
+@media (min-width: 921px) {
+  .hero { overflow: visible; }
+  .hero-art {
+    z-index: 11;
+    top: -24px;
+    right: -1%;
+    bottom: auto;
+    width: 67%;
+    height: 980px;
+  }
+  .hero-copy { z-index: 13; }
+  .hero-player-wrap {
+    top: 0;
+    right: 1%;
+    bottom: auto;
+    width: auto;
+    height: 980px;
+    max-height: none;
+    object-fit: contain;
+    object-position: top right;
+  }
+  .release-wrap { z-index: 10; }
+}
+@media (min-width: 921px) and (max-width: 1180px) {
+  .hero-art { right: -8%; width: 70%; height: 900px; }
+  .hero-player-wrap { height: 900px; }
+}
+@media (max-width: 920px) {
+  .hero { overflow: hidden; }
+  .hero-art { overflow: hidden; }
+  .hero-player-wrap {
+    top: 0;
+    right: 0;
+    bottom: auto;
+    width: 88%;
+    height: auto;
+    max-height: none;
+    object-fit: contain;
+    object-position: top right;
+  }
+}
+@media (max-width: 680px) {
+  .hero-player-wrap { right: 2%; width: 75%; }
+}
+
+/* Lower-third treatment matched to the supplied Bologna Savage reference. */
+.sunset-features {
+  min-height: 414px;
+  padding-top: 66px;
+  padding-bottom: 62px;
+  background:
+    linear-gradient(110deg, rgba(255,219,177,.25), transparent 34%),
+    linear-gradient(112deg, #f7c6ad 0%, #f7b59f 32%, #dfa4ac 68%, #a694bd 100%);
+}
+.sunset-features::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  opacity: .18;
+  background:
+    radial-gradient(ellipse at 16% 75%, rgba(255,231,177,.9), transparent 34%),
+    radial-gradient(ellipse at 72% 12%, rgba(231,185,205,.75), transparent 38%);
+}
+.feature-grid { max-width: 1260px; }
+.feature { min-height: 278px; padding-inline: clamp(22px,3vw,46px); }
+.feature-icon { width: 86px; height: 76px; stroke-width: 5.5; }
+.feature:nth-child(2) .feature-icon { color: #bd171d; }
+.feature:nth-child(4) .feature-icon {
+  color: #148fca;
+  filter: drop-shadow(0 0 7px rgba(20,143,202,.28));
+}
+.feature h2 { margin-top: 8px; font-size: 36px; line-height: 1; }
+.feature p { margin-top: 10px; margin-bottom: 18px; font-size: 20px; }
+.small-button { min-width: 122px; min-height: 47px; background: rgba(255,247,226,.34); }
+.site-footer { padding-top: 30px; padding-bottom: 18px; }
+.footer-content { max-width: 1360px; gap: clamp(34px,4vw,66px); }
+.footer-copy h2 { font-size: 35px; line-height: 1; }
+.footer-copy p { margin-top: 11px; line-height: 1.25; }
+.signup-form { min-height: 58px; }
+.copyright { margin-top: 22px; }
+@media (max-width: 920px) {
+  .sunset-features { padding-top: 58px; padding-bottom: 72px; }
+  .feature { min-height: 255px; }
+}
+@media (max-width: 680px) {
+  .sunset-features { padding-top: 52px; padding-bottom: 78px; }
+  .feature { padding-block: 30px; }
+  .footer-copy p { margin-top: 8px; }
+}
+
+@media (min-width: 921px) {
+  .skate-scene { right: -2px; width: 250px; height: 285px; }
+  .skater { right: 68px; top: 7px; width: 94px; height: 142px; }
+  .skater::before { top: -18px; left: 38px; width: 32px; height: 32px; }
+  .skater::after { left: -8px; bottom: -24px; width: 130px; height: 10px; box-shadow: 17px 10px 0 -1px var(--ink), 98px -10px 0 -1px var(--ink); }
+}
+.footer-socials .social-icon { width: 32px; height: 32px; }
+.footer-socials .youtube { width: 34px; height: 25px; }
+.footer-socials .tiktok { font-size: 30px; }
+
+/* Align the hero PNG's center transparency break with the release-card top edge. */
+@media (min-width: 1181px) {
+  .hero-art { top: 37px; }
+}
+@media (min-width: 921px) and (max-width: 1180px) {
+  .hero-art { top: 15px; }
+}
+
+.release-art {
+  align-self: center;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 1;
+  object-fit: cover;
+  border: 1px solid rgba(0,0,0,.08);
+  box-shadow: 0 12px 25px rgba(0,0,0,.17);
+  transform: rotate(-1deg);
+}
+@media (max-width: 680px) {
+  .release-art { width: min(100%, 340px); margin-inline: auto; }
+}/* Desktop lower third uses the supplied artwork itself. The live controls remain
+   layered over the matching areas so the image is still accessible and usable. */
+@media (min-width: 921px) {
+  .sunset-features {
+    height: 28.6458vw;
+    min-height: 0;
+    margin: 0;
+    padding: 0;
+    background-color: #000;
+    background-image: url("images/lower-third-reference.png");
+    background-repeat: no-repeat;
+    background-position: center -46.5278vw;
+    background-size: 100vw auto;
+  }
+  .sunset-features::before,
+  .sunset-features::after,
+  .sun-glow,
+  .palm-scene,
+  .skate-scene { display: none; }
+  .feature-grid {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    max-width: none;
+    margin: 0;
+  }
+  .feature {
+    min-height: 0;
+    padding: 0;
+    border: 0;
+    opacity: 0;
+  }
+  .feature .small-button {
+    position: absolute;
+    inset: 0;
+    min-width: 0;
+    min-height: 0;
+  }
+  .site-footer {
+    height: 11.6319vw;
+    min-height: 0;
+    padding: 0;
+    color: #fff;
+    background-color: #000;
+    background-image: url("images/lower-third-reference.png");
+    background-repeat: no-repeat;
+    background-position: center -75.1736vw;
+    background-size: 100vw auto;
+  }
+  .footer-content {
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 100%;
+    max-width: none;
+    margin: 0;
+  }
+  .footer-copy,
+  .copyright {
+    opacity: 0;
+    pointer-events: none;
+  }
+  .signup-form {
+    position: absolute;
+    top: 30%;
+    left: 33.3%;
+    width: 30.8%;
+    height: 36%;
+    min-height: 0;
+    background: #050505;
+  }
+  .signup-form input { padding-inline: 1.2vw; }
+  .signup-form button {
+    min-width: 7.8vw;
+    margin: .25vw;
+  }
+  .form-status { top: calc(100% + 3px); }
+  .footer-socials {
+    position: absolute;
+    top: 20%;
+    right: 2.5%;
+    width: 29%;
+    height: 58%;
+    justify-content: space-around;
+    opacity: 0;
+  }
+  .footer-socials a {
+    width: 20%;
+    height: 100%;
+  }
+}
+/* Correct the supplied lower-third crop and its interactive overlays. */
+@media (min-width: 921px) {
+  .sunset-features {
+    height: 29.2208vw;
+    background-position: left -47.4616vw;
+    background-size: 102.0071vw auto;
+  }
+  .site-footer {
+    height: 11.8654vw;
+    margin-top: -1px;
+    background-position: left -76.6824vw;
+    background-size: 102.0071vw auto;
+  }
+
+  .feature-grid {
+    display: block;
+  }
+  .feature {
+    position: absolute;
+    inset: 0;
+    opacity: 1;
+    pointer-events: none;
+  }
+  .feature > :not(.small-button) {
+    opacity: 0;
+  }
+  .feature .small-button {
+    top: 75.5%;
+    bottom: auto;
+    width: 10%;
+    height: 14%;
+    padding: 0;
+    border: 0;
+    color: transparent;
+    background: transparent;
+    opacity: 1;
+    pointer-events: auto;
+  }
+  .feature:nth-child(1) .small-button { left: 12.6%; }
+  .feature:nth-child(2) .small-button { left: 34.1%; }
+  .feature:nth-child(3) .small-button { left: 55.8%; }
+  .feature:nth-child(4) .small-button { left: 75.7%; }
+  .feature .small-button:focus-visible {
+    outline-color: #1477d4;
+  }
+}
+
+/* Mask the form and copyright baked into the reference artwork, then place
+   one functional form and the current copyright over clean black panels. */
+@media (min-width: 921px) {
+  .signup-form {
+    left: 33.7%;
+    width: 32%;
+    z-index: 3;
+    grid-template-columns: minmax(0, 1fr) auto;
+    box-shadow: 0 0 0 .7vw #000;
+  }
+  .signup-form input {
+    min-width: 0;
+  }
+  .signup-form button {
+    width: 7.8vw;
+  }
+  .copyright {
+    position: absolute;
+    z-index: 2;
+    top: 73%;
+    left: 34.5%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 30%;
+    height: 27%;
+    margin: 0;
+    color: #8e8e8e;
+    background: #000;
+    opacity: 1;
+    pointer-events: none;
+    font-size: clamp(12px, 1.05vw, 17px);
+    white-space: nowrap;
+  }
+}
+
+/* Extend only the portrait's lower sleeve so it meets the lower-third artwork.
+   The clipped duplicate leaves the head and the player-card opening unchanged. */
+.hero-player-wrap-extension {
+  display: none;
+}
+@media (min-width: 921px) {
+  .hero-player-wrap-extension {
+    display: block;
+    z-index: 3;
+    clip-path: inset(60.7% 0 0 0);
+    transform: scaleY(1.18);
+    transform-origin: 50% 60.7%;
+  }
+}
+
+/* Center the footer signup action beneath the email field. */
+@media (min-width: 921px) {
+  .signup-form {
+    display: flex;
+    flex-direction: column;
+  }
+  .signup-form input {
+    flex: 1 1 50%;
+    width: 100%;
+  }
+  .signup-form button {
+    flex: 1 1 50%;
+    align-self: center;
+    width: 7.8vw;
+    min-width: 108px;
+  }
+}

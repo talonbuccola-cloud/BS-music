@@ -40,18 +40,7 @@
   isolation: isolate;
 }
 
-.about-hero::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  z-index: 6;
-  pointer-events: none;
-  opacity: .22;
-  background:
-    radial-gradient(circle, rgba(86,47,38,.22) 0 1px, transparent 1.8px) 0 0 / 13px 13px,
-    radial-gradient(circle, rgba(125,44,51,.2) 0 1px, transparent 2px) 5px 6px / 29px 27px;
-  mask-image: linear-gradient(90deg, #000 0 8%, transparent 24% 78%, #000 97%);
-}
+
 
 .about-hero::after {
   content: "";
@@ -136,14 +125,16 @@
   z-index: 2;
   min-width: 0;
   overflow: hidden;
-  background-color: #080911;
+  background-color: var(--about-cream);
   background-image:
-    linear-gradient(90deg, rgba(244,238,227,.96) 0, rgba(244,238,227,.56) 7%, transparent 20%),
-    url("images/about-hero-cover.png");
+    linear-gradient(90deg, rgba(244,238,227,.98) 0, rgba(244,238,227,.7) 8%, transparent 22%),
+    linear-gradient(180deg, rgba(244,238,227,.32) 0, transparent 12%, transparent 86%, rgba(8,9,10,.82) 100%),
+    url("images/about-hero-image.png");
   background-repeat: no-repeat;
-  background-position: center, 55% 78%;
-  background-size: 100% 100%, auto 150%;
-  clip-path: polygon(8% 0, 100% 0, 100% 100%, 0 100%);
+  background-position: center, center, 52% 50%;
+  background-size: 100% 100%, 100% 100%, cover;
+  -webkit-mask-image: linear-gradient(90deg, transparent 0, #000 16%, #000 100%);
+  mask-image: linear-gradient(90deg, transparent 0, #000 16%, #000 100%);
 }
 
 .night-haze {
@@ -189,16 +180,7 @@
   transform: rotate(-7deg);
 }
 
-.about-splatter {
-  position: absolute;
-  z-index: 1;
-  inset: 8% 0 0 0;
-  opacity: .45;
-  background:
-    radial-gradient(circle, #b7172a 0 2px, transparent 3px) 0 0 / 21px 24px,
-    radial-gradient(circle, #683c83 0 1px, transparent 2px) 8px 9px / 31px 33px;
-  mask-image: radial-gradient(ellipse at center, transparent 20%, #000 58%, transparent 90%);
-}
+
 
 .about-hero-visual img {
   position: absolute;
@@ -649,7 +631,8 @@
   }
   .about-hero-visual {
     min-height: 650px;
-    clip-path: none;
+    -webkit-mask-image: none;
+    mask-image: none;
   }
   .about-hero-visual img {
     right: 50%;

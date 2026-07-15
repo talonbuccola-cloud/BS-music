@@ -1,197 +1,113 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Bologna $avage</title>
-  <meta name="description" content="Official music site for Bologna Savage. Independent releases, visuals, and updates. Music first. Everything else second." />
-  <link rel="stylesheet" href="styles.css" />
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f6efe5">
+  <title>Bologna Savage | Real Face. Real Stories.</title>
+  <meta name="description" content="The official Bologna Savage website. Stream the latest music, watch videos, and discover the story behind the artist.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;500;600;700;800;900&family=Permanent+Marker&display=swap" rel="stylesheet">
+  <link rel="icon" href="images/bs-logo-gold.png">
+  <link rel="stylesheet" href="styles.css">
 </head>
-
 <body>
-  <header class="site-header">
-    <a class="brand" href="#top" aria-label="Bologna Savage home">
-      <span class="brand-mark">B$</span>
-      <span class="brand-text">Bologna Savage</span>
-    </a>
-
-    <nav class="nav">
-      <a href="#music">Music</a>
-      <a href="#shows">Shows / News</a>
-      <a href="#contact">Contact</a>
+  <a class="skip-link" href="#main-content">Skip to content</a>
+  <header class="site-header" id="home">
+    <a class="wordmark" href="#home" aria-label="Bologna Savage home"><span>Bologna</span><strong>Savage</strong></a>
+    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="primary-nav" aria-label="Open navigation menu"><span></span><span></span><span></span></button>
+    <nav class="primary-nav" id="primary-nav" aria-label="Primary navigation">
+      <a class="is-active" href="#home">Home</a><a href="#music">Music</a><a href="#videos">Videos</a><a href="#merch">Merch</a><a href="#about">About</a><a href="#contact">Contact</a>
+    </nav>
+    <nav class="social-nav header-socials" aria-label="Music and social links">
+      <!-- Replace placeholder destinations with official artist profile URLs when available. -->
+      <a href="https://open.spotify.com/artist/1iJpRWiCG7e5grLmCbeIa1" target="_blank" rel="noopener noreferrer" aria-label="Bologna Savage on Spotify"><span class="social-icon spotify" aria-hidden="true">≋</span></a>
+      <a href="https://music.apple.com/us/artist/bologna-savage/1714310653" target="_blank" rel="noopener noreferrer" aria-label="Bologna Savage on Apple Music"><span class="social-icon apple" aria-hidden="true">●</span></a>
+      <a href="https://www.youtube.com/channel/UCSRJ0Tz1UBuM8TxJ6avC36g" target="_blank" rel="noopener noreferrer" aria-label="Bologna Savage on YouTube"><span class="social-icon youtube" aria-hidden="true">▶</span></a>
+      <a href="#contact" data-placeholder aria-label="Instagram link coming soon"><span class="social-icon instagram" aria-hidden="true">◎</span></a>
+      <a href="#contact" data-placeholder aria-label="TikTok link coming soon"><span class="social-icon tiktok" aria-hidden="true">♪</span></a>
     </nav>
   </header>
 
-  <main id="top">
-   <section class="hero">
-  <div class="hero-copy">
-    <h1>BOLOGNA $AVAGE</h1>
-
-<div class="hero-intro">
-  <p class="tagline">
-    Independent releases, visuals, and updates.
-  </p>
-
-  <p class="hero-sub">
-     Honest music. Real stories. No filter.
-  </p>
-
-  <p class="micro">
-    Bologna $avage is an independent artist driven by honesty over hype. His music blends raw emotion, sharp lyricism, and lived experience — not chasing trends, but documenting reality as it is.
-  </p>
-
-  <p class="micro">
-    Each release is intentional, personal, and unfiltered. Whether reflective or confrontational, the focus is always the same: say something real, or don’t say anything at all.
-  </p>
-</div>
-
-    <div class="hero-cta">
-      <a class="btn" href="#music">Listen</a>
-      <a class="btn btn-ghost" href="#shows">Shows / News</a>
-    </div>
-  </div>
-
-  <div class="hero-media" aria-label="Hero image">
-    <img src="hero-image.png" alt="Bologna Savage hero image" />
-  </div>
-</section>
-
-   <section id="music" class="section reveal">
-  <div class="section-head">
-    <h2>Music</h2>
-  </div>
-
-  <div class="grid">
-    <!-- Featured track -->
-    <article class="card reveal">
-      <h3>Featured</h3>
-      <p class="muted">A personal favorite.</p>
-
-      <iframe
-        class="spotify-embed"
-        style="border-radius:12px"
-        src="https://open.spotify.com/embed/track/1hRgq3f1Pvl8jp0ZsaTeQE?utm_source=generator"
-        width="100%"
-        height="352"
-        frameborder="0"
-        allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
-        loading="lazy">
-      </iframe>
-    </article>
-
-    <!-- Latest release -->
-    <article class="card">
-      <h3>Latest Release</h3>
-      <p class="muted">Most recent release.</p>
-
-      <iframe
-        class="spotify-embed"
-        style="border-radius:12px"
-        src="https://open.spotify.com/embed/album/1YIgxT0juEm1k2J970i54P?utm_source=generator"
-        width="100%"
-        height="352"
-        frameborder="0"
-        allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
-        loading="lazy">
-      </iframe>
-    </article>
-  </div>
-</section>
-
-    <section id="shows" class="section reveal">
-      <div class="section-head">
-        <h2>Shows / News</h2>
+  <main id="main-content">
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="hero-copy">
+        <p class="eyebrow">Real face. Real stories.</p>
+        <h1 id="hero-title"><span>No</span> <strong>Filter.</strong></h1>
+        <span class="brush-underline" aria-hidden="true"></span>
+        <p class="hero-statement">Music. Art. Tattoos. Life.<br>This is <strong>Bologna Savage.</strong></p>
+        <div class="hero-actions">
+          <a class="button button-primary" href="#music"><span aria-hidden="true">▶</span> Listen now</a>
+          <a class="button button-outline" href="https://www.youtube.com/channel/UCSRJ0Tz1UBuM8TxJ6avC36g" target="_blank" rel="noopener noreferrer"><span aria-hidden="true">▶</span> Watch video</a>
+        </div>
       </div>
-
-      <div class="grid">
-        <article class="card">
-          <h3>Upcoming</h3>
-          <ul class="list">
-            <li><span class="pill">TBA</span> No shows posted yet.</li>
-            <li class="muted">Format later: Date — City — Venue — Tickets link</li>
-          </ul>
-        </article>
-
-        <article class="card">
-          <h3>Updates</h3>
-          <ul class="list">
-            <li><span class="pill">New</span> Site is live. More coming soon.</li>
-            <li class="muted">We can add a real “news” feed later if you want.</li>
-          </ul>
-        </article>
+      <div class="hero-art" aria-label="Portrait of Bologna Savage">
+        <span class="paint-spray paint-spray-one" aria-hidden="true"></span><span class="paint-spray paint-spray-two" aria-hidden="true"></span>
+        <img class="hero-symbol" src="images/bs-logo-gold.png" alt="" aria-hidden="true">
+        <img class="hero-portrait" src="images/hero-cutout.png" alt="Bologna Savage wearing a pink beanie, black glasses, and a black patterned hoodie">
       </div>
     </section>
 
-    <section id="contact" class="section reveal">
-      <div class="section-head">
-        <h2>Contact / Collabs</h2>
-        <p>Interested in collaborating on a track, features, or having Bologna $avage open a show?</p>
-      </div>
-
-      <div class="card">
-        <p class="muted">
-          Contact details coming soon. (We’ll add the form once there’s an email address he can access.)
-        </p>
+    <section class="release-wrap" id="music" aria-labelledby="release-title">
+      <div class="release-card">
+        <!-- Replace this styled placeholder with the final Face Tattoos artwork when supplied. -->
+        <div class="release-art-placeholder" role="img" aria-label="Placeholder artwork for Face Tattoos by Bologna Savage">
+          <span class="cover-kicker">Bologna Savage</span><strong>Face Tattoos</strong>
+          <div class="cover-face" aria-hidden="true"><span class="cover-hair"></span><span class="cover-mouth"></span></div>
+          <small>Life on old bobhart<br>no background</small>
+        </div>
+        <div class="release-main">
+          <p class="section-label">New release</p><h2 id="release-title">Face Tattoos</h2><p class="release-artist">Bologna Savage</p>
+          <!-- Replace the existing verified Bologna Savage Spotify URL with the Face Tattoos release URL when supplied. -->
+          <iframe class="spotify-embed" src="https://open.spotify.com/embed/album/1YIgxT0juEm1k2J970i54P?utm_source=generator&theme=0" title="Face Tattoos by Bologna Savage on Spotify" width="100%" height="152" loading="lazy" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
+          <a class="button button-primary stream-button" href="https://open.spotify.com/album/1YIgxT0juEm1k2J970i54P" target="_blank" rel="noopener noreferrer">Stream everywhere</a>
+        </div>
+        <div class="track-panel" aria-label="Face Tattoos track list">
+          <ol class="track-list">
+            <li><span>01</span><strong>Face Tattoos</strong></li><li><span>02</span><strong>No Kick it - Female vocals</strong></li><li><span>03</span><strong>Bust my moves</strong></li><li><span>04</span><strong>Been Locked Up</strong></li><li><span>05</span><strong>Never be heard</strong></li>
+          </ol>
+          <a class="text-link" href="https://open.spotify.com/artist/1iJpRWiCG7e5grLmCbeIa1" target="_blank" rel="noopener noreferrer">View all music <span aria-hidden="true">→</span></a>
+        </div>
       </div>
     </section>
 
-    <footer class="footer">
-      <p class="muted">© <span id="year"></span> Bologna $avage</p>
-    </footer>
+    <section class="sunset-features" aria-label="Explore Bologna Savage">
+      <div class="sun-glow" aria-hidden="true"></div>
+      <div class="palm-scene" aria-hidden="true"><span class="palm palm-one"></span><span class="palm palm-two"></span></div>
+      <div class="skate-scene" aria-hidden="true"><span class="ramp"></span><span class="skater"></span></div>
+      <div class="feature-grid">
+        <article class="feature" aria-labelledby="feature-music">
+          <svg class="feature-icon" viewBox="0 0 100 76" aria-hidden="true"><path d="M14 58 8 20l28 24L50 8l14 36 28-24-7 38zM18 68h66"/></svg>
+          <h2 id="feature-music">Music</h2><p>Stream the latest releases.</p><a class="small-button" href="#music">Listen</a>
+        </article>
+        <article class="feature" id="videos" aria-labelledby="feature-videos">
+          <svg class="feature-icon" viewBox="0 0 100 76" aria-hidden="true"><path d="m36 8 14 13L65 7M15 24h70v44H15zM26 33h43v26H26zM77 36v2m0 10v2"/></svg>
+          <h2 id="feature-videos">Videos</h2><p>Official videos, visuals and more.</p><a class="small-button" href="https://www.youtube.com/channel/UCSRJ0Tz1UBuM8TxJ6avC36g" target="_blank" rel="noopener noreferrer">Watch</a>
+        </article>
+        <article class="feature" id="merch" aria-labelledby="feature-merch">
+          <svg class="feature-icon" viewBox="0 0 100 76" aria-hidden="true"><path d="M50 8c23 0 39 13 39 31S73 70 50 70 11 57 11 39 27 8 50 8ZM34 30v11m31-11v11M30 50c7 9 32 9 40 0M27 66v8m14-4v6m22-7v7m12-10v7"/></svg>
+          <h2 id="feature-merch">Merch</h2><p>Rep the Savage. Exclusive gear.</p><button class="small-button" type="button" data-coming-soon>Shop</button><span class="coming-soon" role="status" aria-live="polite"></span>
+        </article>
+        <article class="feature" id="about" aria-labelledby="feature-about">
+          <svg class="feature-icon" viewBox="0 0 100 76" aria-hidden="true"><path d="M50 68S12 49 12 25C12 6 38 3 50 22 62 3 88 6 88 25 88 49 50 68 50 68Z"/></svg>
+          <h2 id="feature-about">About</h2><p>The story behind Bologna Savage.</p><a class="small-button" href="#contact">Read more</a>
+        </article>
+      </div>
+    </section>
   </main>
 
-  <script>
-  // Footer year
-  document.getElementById("year").textContent = new Date().getFullYear();
-
-  // Scroll reveal animation
-  const revealEls = document.querySelectorAll(".reveal");
-
-  const io = new IntersectionObserver(
-    (entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add("is-visible");
-          io.unobserve(entry.target); // animate once
-        }
-      });
-    },
-    { threshold: 0.15 }
-  );
-
-  revealEls.forEach((el) => io.observe(el));
-    // Make cards animate even when hovering the Spotify iframe
-document.querySelectorAll(".card iframe").forEach((frame) => {
-  const card = frame.closest(".card");
-  if (!card) return;
-
-  frame.addEventListener("mouseenter", () => card.classList.add("is-iframe-hover"));
-  frame.addEventListener("mouseleave", () => card.classList.remove("is-iframe-hover"));
-});
-   // Subtle hero image parallax on scroll
-const heroImg = document.querySelector(".hero-media img");
-const heroSection = document.querySelector(".hero");
-
-function heroParallax() {
-  if (!heroImg || !heroSection) return;
-
-  const rect = heroSection.getBoundingClientRect();
-  const viewH = window.innerHeight;
-
-  const progress = (viewH - rect.top) / (viewH + rect.height);
-  const clamped = Math.max(0, Math.min(1, progress));
-
-  const y = (clamped - 0.5) * 18; // adjust 18 for more/less movement
-  heroImg.style.transform = `translateY(${y}px)`;
-}
-
-window.addEventListener(
-  "scroll",
-  () => requestAnimationFrame(heroParallax),
-  { passive: true }
-);
-window.addEventListener("resize", heroParallax);
-heroParallax(); 
-</script>
+  <footer class="site-footer" id="contact">
+    <div class="footer-content">
+      <div class="footer-copy"><h2>Stay connected</h2><p>Join the list for new music,<br>videos and exclusive updates.</p></div>
+      <!-- Connect this form to Formspree, Mailchimp, Buttondown, or another mailing-list provider. -->
+      <form class="signup-form" id="signup-form" novalidate><label class="sr-only" for="email">Email address</label><input id="email" name="email" type="email" autocomplete="email" placeholder="Enter your email" required><button type="submit">Join</button><p class="form-status" role="status" aria-live="polite"></p></form>
+      <nav class="social-nav footer-socials" aria-label="Footer music and social links">
+        <a href="https://open.spotify.com/artist/1iJpRWiCG7e5grLmCbeIa1" target="_blank" rel="noopener noreferrer" aria-label="Bologna Savage on Spotify"><span class="social-icon spotify" aria-hidden="true">≋</span></a><a href="https://music.apple.com/us/artist/bologna-savage/1714310653" target="_blank" rel="noopener noreferrer" aria-label="Bologna Savage on Apple Music"><span class="social-icon apple" aria-hidden="true">●</span></a><a href="https://www.youtube.com/channel/UCSRJ0Tz1UBuM8TxJ6avC36g" target="_blank" rel="noopener noreferrer" aria-label="Bologna Savage on YouTube"><span class="social-icon youtube" aria-hidden="true">▶</span></a><a href="#contact" data-placeholder aria-label="Instagram link coming soon"><span class="social-icon instagram" aria-hidden="true">◎</span></a><a href="#contact" data-placeholder aria-label="TikTok link coming soon"><span class="social-icon tiktok" aria-hidden="true">♪</span></a>
+      </nav>
+    </div>
+    <p class="copyright">© <span id="year"></span> Bologna Savage. All Rights Reserved.</p>
+  </footer>
+  <script src="script.js"></script>
 </body>
 </html>

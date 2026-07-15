@@ -483,3 +483,76 @@ html,body{max-width:100%;overflow-x:hidden}.hero{overflow:hidden}
     z-index: 3;
   }
 }
+
+/* Preserve the source artwork's proportions on phones. The sky remains a
+   flexible gradient, while narrow edge windows reveal the real palm trees and
+   skater from the supplied image without stretching the landscape photo. */
+@media (max-width: 680px) {
+  .sunset-features {
+    background:
+      linear-gradient(110deg, rgba(255, 219, 177, .25), transparent 34%),
+      linear-gradient(112deg, #f7c6ad 0%, #f7b59f 32%, #dfa4ac 68%, #a694bd 100%);
+  }
+
+  .sunset-features::before {
+    opacity: .18;
+    background:
+      radial-gradient(ellipse at 16% 75%, rgba(255, 231, 177, .9), transparent 34%),
+      radial-gradient(ellipse at 72% 12%, rgba(231, 185, 205, .75), transparent 38%);
+    background-size: auto;
+    background-position: center;
+  }
+
+  .palm-scene,
+  .skate-scene {
+    display: block;
+    top: 0;
+    bottom: 0;
+    height: 100%;
+    opacity: .92;
+    background-color: transparent;
+    background-image: url("images/about-footer-sunset.png");
+    background-repeat: no-repeat;
+    background-size: auto 392%;
+    pointer-events: none;
+  }
+
+  .palm-scene {
+    left: 0;
+    width: 132px;
+    background-position: left 46.5%;
+  }
+
+  .skate-scene {
+    right: 0;
+    width: 164px;
+    background-position: right 46.5%;
+  }
+
+  .palm-scene .palm,
+  .skate-scene .ramp,
+  .skate-scene .skater {
+    display: none;
+  }
+}
+
+@media (max-width: 680px) {
+  .palm-scene,
+  .skate-scene {
+    top: auto;
+    bottom: 0;
+    height: 56%;
+    opacity: .88;
+    mix-blend-mode: multiply;
+  }
+
+  .palm-scene {
+    left: -48px;
+    width: 112px;
+  }
+
+  .skate-scene {
+    right: -58px;
+    width: 142px;
+  }
+}

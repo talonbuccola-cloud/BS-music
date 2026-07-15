@@ -49,16 +49,16 @@
   position: absolute;
   z-index: 8;
   left: 0;
+  right: 0;
   bottom: 0;
-  width: 48%;
-  height: 42px;
+  height: 53px;
   pointer-events: none;
   background-image:
     url("images/about-hero-black-line.png"),
-    linear-gradient(180deg, transparent 0 17px, var(--about-black) 29px 100%);
+    linear-gradient(180deg, transparent 0 11px, var(--about-black) 31px 100%);
   background-repeat: no-repeat;
-  background-position: left -31vw, left top;
-  background-size: 48vw auto, 100% 100%;
+  background-position: left -64.6vw, left top;
+  background-size: 100vw auto, 100% 100%;
 }
 
 .about-hero-copy {

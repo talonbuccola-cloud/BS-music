@@ -34,6 +34,8 @@
   grid-template-columns: 45% 55%;
   min-height: 760px;
   overflow: hidden;
+  z-index: 2;
+  margin-bottom: -10px;
   background:
     radial-gradient(circle at 12% 28%, rgba(255,255,255,.65), transparent 31%),
     linear-gradient(105deg, #f7f0e5 0%, #efe4d5 49%, #1a1320 72%, #07080d 100%);
@@ -46,12 +48,17 @@
   content: "";
   position: absolute;
   z-index: 8;
-  left: -2%;
-  right: -2%;
-  bottom: -1px;
-  height: 31px;
-  background: var(--about-black);
-  clip-path: polygon(0 31%, 5% 57%, 11% 38%, 17% 67%, 24% 35%, 31% 72%, 38% 40%, 45% 64%, 52% 33%, 59% 68%, 66% 37%, 73% 65%, 80% 34%, 87% 61%, 94% 35%, 100% 58%, 100% 100%, 0 100%);
+  left: 0;
+  bottom: 0;
+  width: 48%;
+  height: 42px;
+  pointer-events: none;
+  background-image:
+    url("images/about-hero-black-line.png"),
+    linear-gradient(180deg, transparent 0 17px, var(--about-black) 29px 100%);
+  background-repeat: no-repeat;
+  background-position: left -31vw, left top;
+  background-size: 48vw auto, 100% 100%;
 }
 
 .about-hero-copy {
@@ -127,14 +134,14 @@
   overflow: hidden;
   background-color: var(--about-cream);
   background-image:
-    linear-gradient(90deg, rgba(244,238,227,.98) 0, rgba(244,238,227,.7) 8%, transparent 22%),
+    linear-gradient(90deg, rgba(244,238,227,.98) 0, rgba(244,238,227,.76) 7%, transparent 18%),
     linear-gradient(180deg, rgba(244,238,227,.32) 0, transparent 12%, transparent 86%, rgba(8,9,10,.82) 100%),
     url("images/about-hero-image.png");
   background-repeat: no-repeat;
   background-position: center, center, 52% 50%;
   background-size: 100% 100%, 100% 100%, cover;
-  -webkit-mask-image: linear-gradient(90deg, transparent 0, #000 16%, #000 100%);
-  mask-image: linear-gradient(90deg, transparent 0, #000 16%, #000 100%);
+  -webkit-mask-image: linear-gradient(90deg, transparent 0, #000 12%, #000 100%);
+  mask-image: linear-gradient(90deg, transparent 0, #000 12%, #000 100%);
 }
 
 .night-haze {
@@ -621,6 +628,10 @@
   }
   .about-hero {
     grid-template-columns: 1fr;
+    margin-bottom: -2px;
+  }
+  .about-hero::after {
+    display: none;
   }
   .about-hero-copy {
     max-width: none;

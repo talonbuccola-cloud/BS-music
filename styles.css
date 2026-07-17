@@ -863,7 +863,7 @@ html,body{max-width:100%;overflow-x:hidden}.hero{overflow:hidden}
 
   .hero-symbol {
     top: 12%;
-    right: 8%;
+    right: 22%;
     width: 82%;
     max-height: 75%;
     opacity: .9;
@@ -928,7 +928,7 @@ html,body{max-width:100%;overflow-x:hidden}.hero{overflow:hidden}
   }
 
   .hero-symbol {
-    right: 3%;
+    right: 18%;
     width: 78%;
   }
 }

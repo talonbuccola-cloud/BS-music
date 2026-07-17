@@ -932,3 +932,78 @@ html,body{max-width:100%;overflow-x:hidden}.hero{overflow:hidden}
     width: 78%;
   }
 }
+
+/* Mobile feature grid: keep one continuous sunset field and let the silhouettes
+   frame the edges instead of sitting behind the cards. */
+@media (max-width: 700px) {
+  .sunset-features {
+    position: relative;
+    overflow: visible;
+    isolation: isolate;
+    background:
+      radial-gradient(ellipse at 14% 82%, rgba(255, 231, 174, .8), transparent 34%),
+      radial-gradient(ellipse at 78% 8%, rgba(218, 174, 216, .55), transparent 42%),
+      linear-gradient(112deg, #ffd7b1 0%, #f8b9a3 34%, #e7a3ad 68%, #b79cc5 100%);
+    border-bottom: 0;
+  }
+
+  .sunset-features::before {
+    display: block;
+    inset: 0;
+    z-index: 1;
+    opacity: 1;
+    background:
+      linear-gradient(90deg, rgba(255, 255, 255, .16), transparent 24%, transparent 76%, rgba(255, 255, 255, .08)),
+      radial-gradient(ellipse at 50% 18%, rgba(255, 255, 255, .14), transparent 44%);
+    pointer-events: none;
+  }
+
+  .sun-glow {
+    display: none;
+  }
+
+  .feature-grid {
+    position: relative;
+    z-index: 5;
+  }
+
+  .feature {
+    background:
+      linear-gradient(180deg, rgba(255, 255, 255, .09), rgba(255, 255, 255, .03));
+  }
+
+  .palm-scene,
+  .skate-scene {
+    display: block;
+    top: auto;
+    height: 270px;
+    opacity: .9;
+    mix-blend-mode: normal;
+    background: none;
+    pointer-events: none;
+  }
+
+  .palm-scene {
+    z-index: 2;
+    left: -112px;
+    bottom: -38px;
+    width: 165px;
+  }
+
+  .skate-scene {
+    z-index: 2;
+    right: -122px;
+    bottom: -54px;
+    width: 210px;
+  }
+
+  .palm-scene .palm,
+  .skate-scene .ramp,
+  .skate-scene .skater {
+    display: block;
+  }
+
+  .sunset-features::after {
+    z-index: 8;
+  }
+}

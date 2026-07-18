@@ -969,8 +969,8 @@ html,body{max-width:100%;overflow-x:hidden}.hero{overflow:hidden}
   .skate-scene {
     display: block;
     top: auto;
-    opacity: .9;
-    mix-blend-mode: multiply;
+    opacity: 1;
+    mix-blend-mode: normal;
     background-repeat: no-repeat;
     background-size: contain;
     pointer-events: none;
@@ -978,20 +978,20 @@ html,body{max-width:100%;overflow-x:hidden}.hero{overflow:hidden}
 
   .palm-scene {
     z-index: 2;
-    left: clamp(-88px, -24vw, -68px);
-    bottom: -36px;
-    width: clamp(112px, 34vw, 152px);
-    height: clamp(355px, 92vw, 450px);
+    left: clamp(-46px, -11vw, -32px);
+    bottom: -48px;
+    width: clamp(150px, 45vw, 190px);
+    height: clamp(420px, 108vw, 530px);
     background-image: url("images/mobile-palm-trees.png");
     background-position: left bottom;
   }
 
   .skate-scene {
     z-index: 2;
-    right: clamp(-238px, -56vw, -182px);
-    bottom: -82px;
-    width: clamp(245px, 67vw, 330px);
-    height: clamp(270px, 70vw, 350px);
+    right: clamp(-136px, -34vw, -98px);
+    bottom: -126px;
+    width: clamp(300px, 82vw, 390px);
+    height: clamp(320px, 82vw, 390px);
     background-image: url("images/mobile-skater.png");
     background-position: right bottom;
   }
@@ -1009,7 +1009,7 @@ html,body{max-width:100%;overflow-x:hidden}.hero{overflow:hidden}
 
   .feature {
     background:
-      linear-gradient(180deg, rgba(255, 255, 255, .16), rgba(255, 255, 255, .06));
+      linear-gradient(180deg, rgba(255, 255, 255, .22), rgba(255, 255, 255, .09));
   }
 
   .feature-icon {
@@ -1019,7 +1019,7 @@ html,body{max-width:100%;overflow-x:hidden}.hero{overflow:hidden}
   }
 
   .feature-icon-music {
-    width: 88px;
+    width: 86px;
   }
 
   .feature-icon-about {

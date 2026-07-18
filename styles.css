@@ -988,7 +988,7 @@ html,body{max-width:100%;overflow-x:hidden}.hero{overflow:hidden}
 
   .skate-scene {
     z-index: 2;
-    right: clamp(-136px, -34vw, -98px);
+    right: clamp(-66px, -18vw, -42px);
     bottom: -126px;
     width: clamp(300px, 82vw, 390px);
     height: clamp(320px, 82vw, 390px);
